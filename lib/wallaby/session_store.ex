@@ -12,7 +12,7 @@ defmodule Wallaby.SessionStore do
   end
 
   def monitor(store \\ __MODULE__, session) do
-    GenServer.call(store, {:monitor, session}, 10_000)
+    GenServer.call(store, {:monitor, session}, 15_000)
   end
 
   def demonitor(store \\ __MODULE__, session) do
